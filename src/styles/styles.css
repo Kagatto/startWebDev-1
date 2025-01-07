@@ -1,0 +1,42 @@
+:root {
+    --primary-color: rgb(240 240 240);
+    --secondary-color: rgb(16 16 16);
+    --main-fonts: serif, cursive, ui-rounded, monospace;
+
+    /* Button Properties */
+    --bttn-bor-radius: 5px;
+
+    --bttn-hover-color: rgb(30 30 30);
+    --bttn-hover-bcolor: rgb(200 200 200);
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: var(--main-fonts);
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+form input,
+form textarea {
+    border-radius: var(--bttn-bor-radius);
+}
+
+form button {
+    font-family: var(--main-fonts);
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: var(--bttn-bor-radius);
+    padding: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+form button:hover {
+    background-color: var(--bttn-hover-bcolor);
+    color: var(--bttn-hover-color);
+}
