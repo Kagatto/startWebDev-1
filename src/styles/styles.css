@@ -7,7 +7,7 @@
 
     /* Font Properties */
     --main-fonts: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --txt-shadow: 2px 2px 2px var(--shadow-color);
+    --txt-shadow: 2px 1px 2px var(--shadow-color);
 
     /* Border Properties */
     --bor-radius: 6px;
@@ -25,15 +25,13 @@ body {
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-family: var(--main-fonts);
+    text-shadow: var(--txt-shadow);
 }
 
 h1 {
     display: flex;
     justify-content: center;
-}
-
-p {
-    text-shadow: var(--txt-shadow);
+    text-shadow: none;
 }
 
 form input,
@@ -67,7 +65,6 @@ form button:hover {
 
 .main-nav li {
     user-select: none;
-    text-shadow: 2px 2px 2px var(--shadow-color);
 }
 
 .main-nav a {
