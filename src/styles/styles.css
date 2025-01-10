@@ -1,13 +1,24 @@
 :root {
+    /* Color Properties */
     --primary-color: rgb(240 240 240);
     --secondary-color: rgb(16 16 16);
-    --main-fonts: serif, cursive, ui-rounded, monospace;
+    --shadow-color: rgb(200 200 200);
+    --navbar-color: rgb(30 30 30);
+
+    /* Font Properties */
+    --main-fonts: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --txt-shadow: 2px 2px 2px var(--shadow-color);
+
+    /* Border Properties */
+    --bor-radius: 6px;
 
     /* Button Properties */
-    --bttn-bor-radius: 5px;
-
     --bttn-hover-color: rgb(30 30 30);
     --bttn-hover-bcolor: rgb(200 200 200);
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -21,22 +32,80 @@ h1 {
     justify-content: center;
 }
 
+p {
+    text-shadow: var(--txt-shadow);
+}
+
 form input,
-form textarea {
-    border-radius: var(--bttn-bor-radius);
+form textarea,
+form button {
+    border-radius: var(--bor-radius);
 }
 
 form button {
-    font-family: var(--main-fonts);
+    font: inherit;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     border: none;
-    border-radius: var(--bttn-bor-radius);
     padding: 0.5rem;
+    margin-top: 0.2rem;
     transition: all 0.2s ease-in-out;
 }
 
 form button:hover {
     background-color: var(--bttn-hover-bcolor);
     color: var(--bttn-hover-color);
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+}
+
+.main-nav li {
+    user-select: none;
+    text-shadow: 2px 2px 2px var(--shadow-color);
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.main-nav details {
+    position: relative;
+    padding: 0;
+}
+
+.main-nav details>summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.main-nav details>summary:hover {
+    opacity: 0.8;
+}
+
+.main-nav details ul {
+    display: flex;
+    flex-direction: column;
+    list-style: square inside;
+    text-indent: 1rem;
+}
+
+.main-nav details[open] ul {
+    position: absolute;
+    z-index: 100;
+    padding: 0.5rem;
+    transition: all 0.1s ease-in-out;
+    border-radius: var(--bor-radius);
+    background-color: var(--navbar-color);
 }
