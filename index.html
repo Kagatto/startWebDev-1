@@ -21,18 +21,19 @@
         <li>
           <details name="projects">
             <summary>Simple projects</summary>
-              <ul>
-                <li><a href="/public/todo_list.html">Todo List</a></li>
-                <li><a href="#">"Super long name project that is way too long for absolutely no reason at all"-inator</a></li>
-              </ul>
+            <ul>
+              <li><a href="/public/todo_list.html">Todo List</a></li>
+              <li><a href="#">"Super long name project that is way too long for absolutely no reason at all"-inator</a>
+              </li>
+            </ul>
           </details>
         </li>
         <li>
           <details name="projects">
             <summary>Complex projects</summary>
-              <ul>
-                <li><a href="#">Project 1</a></li>
-              </ul>
+            <ul>
+              <li><a href="#">Project 1</a></li>
+            </ul>
           </details>
         </li>
       </ul>
@@ -42,8 +43,8 @@
       <br>
       (Or is it? <strong>*vsauce theme*</strong>)
     </p>
+    <hr>
   </header>
-  <hr>
   <main>
     <section class="epic-paragraphs">
       <p>This is a paragraph.</p>
@@ -54,7 +55,9 @@
     </section>
     <article>
       <!-- TODO: Verify the form action and method -->
-      <form action="" method="get">
+      <!-- Basically make the contact form actually connect to something -->
+      <!-- Maybe change it to simply send an email [???] -->
+      <form action="" method="get" class="contact-form">
         <legend>Contact Me</legend>
         <fieldset>
           <legend>Your Information</legend>
@@ -67,7 +70,6 @@
         <fieldset>
           <legend>What do you want to say?</legend>
           <label for="message">Message:</label>
-          <br>
           <textarea id="message" name="message" cols="30" rows="2"></textarea>
         </fieldset>
         <button type="reset">Reset</button>
@@ -77,8 +79,8 @@
       </form>
     </article>
   </main>
-  <hr>
   <footer>
+    <hr>
     <p>&copy; 2024 Kagatto</p>
   </footer>
 </body>
