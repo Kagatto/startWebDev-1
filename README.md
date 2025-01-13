@@ -33,8 +33,8 @@ porque a mi me gustaron o me parecieron interesantes. Por ejemplo:
 - Docker o herramientas similares
 - Entre otras que vaya encontrando
 
-Si se utiliza algun recurso que su licencia requiera mencionarse se mencionara aqui en el README.
-
 ## Recursos usados y enlaces de interes
+Si se utiliza algun recurso importante se mencionara aqui en el README.
+
 - https://roadmap.sh/full-stack
 - https://developer.mozilla.org/en-US/
