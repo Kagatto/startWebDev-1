@@ -1,20 +1,21 @@
 :root {
     /* Color Properties */
-    --primary-color: rgb(240 240 240);
-    --secondary-color: rgb(16 16 16);
-    --shadow-color: rgb(200 200 200);
-    --navbar-color: rgb(30 30 30);
+    --FONT-COLOR: rgb(240 240 240);
+    --BG-COLOR: rgb(16 16 16);
+    --BG-HEADER-COLOR: rgb(25 25 25);
+    --SHADOW-COLOR: rgb(200 200 200);
+    --NAVBAR-COLOR: rgb(40 40 40);
 
     /* Font Properties */
-    --main-fonts: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    --txt-shadow: 1px 1px 4px var(--shadow-color);
+    --MAIN-FONTS: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    --TXT-SHADOW: 1px 1px 4px var(--SHADOW-COLOR);
 
     /* Border Properties */
-    --bor-radius: 6px;
+    --BOR-RADIUS: 6px;
 
     /* Button Properties */
-    --bttn-hover-color: rgb(30 30 30);
-    --bttn-hover-bcolor: rgb(200 200 200);
+    --BTTN-HOVER-COLOR: rgb(30 30 30);
+    --BTTN-HOVER-BCOLOR: rgb(200 200 200);
 }
 
 /* Reset */
@@ -24,14 +25,33 @@
     box-sizing: border-box;
 }
 
+button {
+    font: inherit;
+}
+
 /* End Reset */
 
 /* General styling */
 body {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-    font-family: var(--main-fonts);
-    text-shadow: var(--txt-shadow);
+    background-color: var(--BG-COLOR);
+    color: var(--FONT-COLOR);
+    font-family: var(--MAIN-FONTS);
+    text-shadow: var(--TXT-SHADOW);
+}
+
+header {
+    background-color: var(--BG-HEADER-COLOR);
+    padding-top: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+hr {
+    margin-top: 1rem;
 }
 
 h1 {
@@ -43,13 +63,6 @@ h1 {
 
 p {
     padding: 0.5rem;
-}
-
-footer {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 }
 
 /* End General styling */
@@ -76,46 +89,52 @@ form label {
     margin-top: 0.5rem;
 }
 
-form label,
-form input,
-form textarea {
+form :is(label, input, textarea) {
     margin-left: 0.5rem;
 }
 
-form input,
-form textarea {
+form :is(input, textarea) {
     margin-bottom: 0.5rem;
 }
 
-form input,
-form textarea,
-form button {
-    border-radius: var(--bor-radius);
+form :is(input, textarea, button) {
+    border-radius: var(--BOR-RADIUS);
 }
 
 form button {
-    font: inherit;
-    color: var(--secondary-color);
-    background-color: var(--primary-color);
+    color: var(--BG-COLOR);
+    background-color: var(--FONT-COLOR);
     border: none;
     padding: 0.5rem;
     margin-top: 0.2rem;
     transition: all 0.2s ease-in-out;
 }
 
-form button:hover,
-form button:active {
+form :is(button:hover, button:active) {
     cursor: pointer;
-    background-color: var(--bttn-hover-bcolor);
-    color: var(--bttn-hover-color);
+    background-color: var(--BTTN-HOVER-BCOLOR);
+    color: var(--BTTN-HOVER-COLOR);
 }
 
 /* End Forms */
 
 /* Media Queries */
 
+/* Mobile Landscape */
+@media screen and (orientation: landscape) {
+
+    body {
+        font-size: 0.9rem;
+    }
+
+    .main-nav {
+        display: none;
+    }
+}
+
+
 /* Desktop */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 864px) {
 
     /* Main Nav */
     .main-nav {
@@ -134,19 +153,18 @@ form button:active {
         user-select: none;
     }
 
-    .main-nav a {
+    .main-nav a:any-link {
         text-decoration: none;
-        color: var(--primary-color);
+        color: var(--FONT-COLOR);
     }
 
-    .main-nav a:hover {
+    .main-nav :is(a:hover, a:focus) {
         text-decoration: underline;
         opacity: 0.8;
     }
 
     .main-nav details {
         position: relative;
-        transition: all 0.1s ease-in-out;
     }
 
     .main-nav details>summary {
@@ -170,28 +188,13 @@ form button:active {
         position: absolute;
         z-index: 100;
         padding: 0.5rem;
-        transition: all 0.1s ease-in-out;
-        border-radius: var(--bor-radius);
-        background-color: var(--navbar-color);
+        border-radius: var(--BOR-RADIUS);
+        background-color: var(--NAVBAR-COLOR);
+        transition: all 0.2s ease-in-out;
     }
 
     /* End Main Nav */
 }
-
-@media screen and (max-height: 640px) and (orientation: landscape) {
-
-    body {
-        font-size: 0.9rem;
-    }
-
-    footer {
-        position: static;
-        bottom: 0;
-    }
-
-    .main-nav {
-        display: none;
-    }
-}
+/* End Desktop */
 
 /* End Media Queries */
