@@ -1,6 +1,19 @@
 :root {
-    --TODO-ACT-SIZE: clamp(2rem, 2vw, 4rem);
+    /* Color Properties */
+    --TODO-DEL-HOVER-BGCOLOR: #A80016;
+    --TODO-DEL-ACTIVE-BGCOLOR: #61000D;
 
+    --TODO-ADD-HOVER-COLOR: #333;
+    --TODO-ADD-HOVER-BGCOLOR: #49E600;
+    --TODO-ADD-ACTIVE-BGCOLOR: #41CF00;
+
+    --TODO-EDIT-HOVER-COLOR: #F0F0F0;
+    --TODO-EDIT-HOVER-BGCOLOR: #0D16D1;
+    --TODO-EDIT-ACTIVE-BGCOLOR: #091099;
+
+
+    /* Size Properties */
+    --TODO-ACT-SIZE: clamp(2rem, 2vw, 4rem);
     --TODO-PADDING: 0.5rem;
 }
 
@@ -85,6 +98,33 @@
     min-height: 2rem;
     height: var(--TODO-ACT-SIZE);
     padding: 0.25rem;
+    border-radius: var(--BOR-RADIUS);
+}
+
+.todo-delete,
+.todo-edit {
+    cursor: pointer;
+}
+
+.todo-delete:hover,
+.todo-delete:focus {
+    background-color: var(--TODO-DEL-HOVER-BGCOLOR);
+    color: var(--FONT-COLOR);
+    border-radius: 0;
+}
+
+.todo-edit:hover,
+.todo-edit:focus {
+    background-color: var(--TODO-EDIT-HOVER-BGCOLOR);
+    color: var(--TODO-EDIT-HOVER-COLOR);
+}
+
+.todo-delete:active {
+    background-color: var(--TODO-DEL-ACTIVE-BGCOLOR);
+}
+
+.todo-edit:active {
+    background-color: var(--TODO-EDIT-ACTIVE-BGCOLOR);
 }
 
 .todo-add {
@@ -92,6 +132,19 @@
     padding: 0.5rem;
 }
 
+.todo-add:hover,
+.todo-add:focus {
+    cursor: pointer;
+    background-color: var(--TODO-ADD-HOVER-BGCOLOR);
+    color: var(--TODO-ADD-HOVER-COLOR);
+}
+
+.todo-add:active {
+    background-color: var(--TODO-ADD-ACTIVE-BGCOLOR);
+}
+
 /* End Todo Buttons */
 
 /* End Todo Element */
+
+/* End Todo List */
