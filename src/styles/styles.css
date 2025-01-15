@@ -37,6 +37,8 @@ body {
     color: var(--FONT-COLOR);
     font-family: var(--MAIN-FONTS);
     text-shadow: var(--TXT-SHADOW);
+    min-height: 100vh;
+    position: relative;
 }
 
 header {
@@ -45,9 +47,9 @@ header {
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 hr {

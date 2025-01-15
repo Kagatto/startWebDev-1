@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Todo List</title>
   <link rel="stylesheet" href="/src/styles/styles.css">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="/src/styles/todo-list.css">
+  <link rel="icon" type="image/png" href="/src/assets/images/1024px-Smiley.svg-1537620171.png">
   <script src="/src/scripts/dyna-navbar.js"></script>
 </head>
 
@@ -19,24 +20,46 @@
         <li>
           <details name="projects">
             <summary>Simple projects</summary>
-              <ul>
-                <li><a href="/public/todo_list.html">Todo List</a></li>
-                <li><a href="#">"Super long name project that is way too long for absolutely no reason at all"-inator</a></li>
-              </ul>
+            <ul>
+              <li><a href="/public/todo_list.html">Todo List</a></li>
+              <li><a href="#">"Super long name project that is way too long for absolutely no reason at all"-inator</a>
+              </li>
+            </ul>
           </details>
         </li>
         <li>
           <details name="projects">
             <summary>Complex projects</summary>
-              <ul>
-                <li><a href="#">Project 1</a></li>
-              </ul>
+            <ul>
+              <li><a href="#">Project 1</a></li>
+            </ul>
           </details>
         </li>
       </ul>
     </nav>
     <hr>
   </header>
+  <main>
+    <div class="todo-list">
+      <div class="todo-element">
+        <input class="todo-checkbox" type="checkbox" id="task-1">
+        <label class="todo-text" for="task-1">Todo 1</label>
+        <div class="todo-actions">
+          <button class="todo-delete">Delete</button>
+          <button class="todo-edit">Edit</button>
+        </div>
+      </div>
+      <div class="todo-element">
+        <input class="todo-checkbox" type="checkbox" id="task-2">
+        <label class="todo-text" for="task-2">Todo 2</label>
+        <div class="todo-actions">
+          <button class="todo-delete">Delete</button>
+          <button class="todo-edit">Edit</button>
+        </div>
+      </div>
+      <button class="todo-add">Add Task</button>
+    </div>
+  </main>
   <footer>
     <hr>
     <p>&copy; 2024 Kagatto</p>

@@ -1,0 +1,97 @@
+:root {
+    --TODO-ACT-SIZE: clamp(2rem, 2vw, 4rem);
+
+    --TODO-PADDING: 0.5rem;
+}
+
+/* Todo List */
+.todo-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+/* Todo Element */
+.todo-element {
+    display: flex;
+    justify-content: space-between;
+    border-radius: var(--BOR-RADIUS);
+    padding: var(--TODO-PADDING);
+}
+
+.todo-element:hover,
+.todo-element:active,
+.todo-element:focus-within {
+    background-color: var(--NAVBAR-COLOR);
+}
+
+.todo-text,
+.todo-checkbox {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Todo Text */
+.todo-text {
+    flex-grow: 1;
+    margin: 0 0.8rem;
+    align-self: center;
+    text-align: center;
+    padding: var(--TODO-PADDING);
+}
+
+/* End Todo Text */
+
+/* Todo Checkbox */
+.todo-checkbox {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid var(--FONT-COLOR);
+    min-width: 1.5rem;
+    height: 1.5rem;
+    align-self: center;
+}
+
+.todo-checkbox:hover {
+    cursor: pointer;
+}
+
+.todo-checkbox:checked {
+    background-color: floralwhite;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-checkbox:checked::before {
+    content: '✔';
+    display: flex;
+    justify-content: center;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* End Todo Checkbox */
+
+/* Todo Buttons */
+.todo-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.todo-actions button {
+    min-height: 2rem;
+    height: var(--TODO-ACT-SIZE);
+    padding: 0.25rem;
+}
+
+.todo-add {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+/* End Todo Buttons */
+
+/* End Todo Element */
