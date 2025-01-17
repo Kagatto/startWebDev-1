@@ -37,8 +37,8 @@ body {
     color: var(--FONT-COLOR);
     font-family: var(--MAIN-FONTS);
     text-shadow: var(--TXT-SHADOW);
-    min-height: 100vh;
     position: relative;
+    min-height: 100vh;
 }
 
 header {
@@ -68,6 +68,20 @@ p {
 }
 
 /* End General styling */
+
+/* Epic Paragraphs */
+.epic-paragraphs {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.epic-paragraphs p:hover {
+    cursor: pointer;
+}
+
+/* End Epic Paragraphs */
 
 /* Main Nav */
 .main-nav {
@@ -152,6 +166,9 @@ form :is(button:hover, button:active) {
     }
 
     .main-nav li {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
     }
 
@@ -179,6 +196,7 @@ form :is(button:hover, button:active) {
     }
 
     .main-nav details ul {
+        width: 100%;
         display: flex;
         flex-direction: column;
         list-style: square inside;
@@ -197,6 +215,7 @@ form :is(button:hover, button:active) {
 
     /* End Main Nav */
 }
+
 /* End Desktop */
 
 /* End Media Queries */

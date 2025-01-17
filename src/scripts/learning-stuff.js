@@ -10,4 +10,12 @@ paragraph.forEach((p) => {
             p.style.color = "inherit";
         }, 1000);
     });
+
+    p.addEventListener("click", () => {
+        p.style.color = "#f00";
+
+        setTimeout(() => {
+            p.style.color = "inherit";
+        }, 1000);
+    });
 });
